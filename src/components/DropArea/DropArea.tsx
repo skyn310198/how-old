@@ -36,7 +36,7 @@ export default class DropArea extends React.Component<IProps, IState>{
         try{
             reader.readAsBinaryString(file);
         }catch(error){
-            this.props.setResults("Sorry we had trouble loading that file please use a downloaded image file",0);
+            this.props.setResults("Sorry we had trouble loading that file, please use a downloaded image file",0);
         }
     }
     
@@ -74,7 +74,7 @@ export default class DropArea extends React.Component<IProps, IState>{
                                 {
                                     this.state.imageFiles.length > 0 ?
                                         <div>{this.state.imageFiles.map((file) => <img className="image1" key={file.name} src={file.preview} />)}</div> :
-                                        <p>Try dropping some files here, or click to select files to upload.</p>
+                                        <p>Drag and drop a file here or click to select a file to upload.</p>
                                 }
                             </div>
                         </ReactDropzone>
